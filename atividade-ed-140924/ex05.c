@@ -3,12 +3,12 @@
 int main() {
 	int i, j, *p, *q;
 
-	p = i;
+	p = i; // ilegal
 	q = &j;
 	p = &*&i;
 	i = (*&)j; // ilegal
 	i = *&j;
 	i = *&*&j;
-	q = *p;
+	q = *p; // ilegal
 	i = (*p)++ + *q;
 }
